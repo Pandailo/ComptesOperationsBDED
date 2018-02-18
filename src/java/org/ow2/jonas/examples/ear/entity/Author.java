@@ -46,8 +46,8 @@ import javax.persistence.OneToMany;
  * @author Florent Benoit
  */
 @Entity
-@NamedQueries({@NamedQuery(name=ALL_AUTHORS, query="select o FROM Author o"),
-               @NamedQuery(name=FIND_AUTHOR, query="select o FROM Author o WHERE o.name = :MYNAME")})
+@NamedQueries({@NamedQuery(name=Author.QN.ALL_AUTHORS, query="select o FROM Author o"),
+               @NamedQuery(name=Author.QN.FIND_AUTHOR, query="select o FROM Author o WHERE o.name = :MYNAME")})
 public class Author implements Serializable {
     /**
      * Store Query names.

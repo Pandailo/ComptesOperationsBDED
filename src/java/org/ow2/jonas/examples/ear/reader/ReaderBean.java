@@ -149,7 +149,7 @@ public class ReaderBean implements LocalReader, RemoteReader {
     /**
      * @return the list of all the persisted {@link Book}s.
      */
-    @SuppressWarnings("unchecked")
+   @SuppressWarnings("unchecked")
     public List<Operation> listAllOperations() {
         return entityManager.createNamedQuery(ALL_OPERATIONS).getResultList();
     }

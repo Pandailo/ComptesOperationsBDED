@@ -39,8 +39,8 @@ import javax.persistence.NamedQuery;
  * @author Moi
  */
 @Entity
-@NamedQueries({@NamedQuery(name=Operation.QN.ALL_OPERATIONS, query="select o FROM Operations o"),
-               @NamedQuery(name=Operation.QN.FIND_OPERATION, query="select o FROM Operations o WHERE o.id = :MYID")
+@NamedQueries({@NamedQuery(name=Operation.QN.ALL_OPERATIONS, query="select o FROM Operation o"),
+               @NamedQuery(name=Operation.QN.FIND_OPERATION, query="select o FROM Operation o WHERE o.id = :MYID")
 })
 public class Operation implements Serializable {
 
@@ -102,7 +102,7 @@ public class Operation implements Serializable {
     }
 
     /**
-     * @return the Author of this Book.
+
      */
     @ManyToOne
     @JoinColumn(name="accountId")
@@ -111,8 +111,7 @@ public class Operation implements Serializable {
     }
 
     /**
-     * Sets the author of this book.
-     * @param author the given author.
+
      */
     public void setCompte(final Compte compte) {
         this.compte = compte;
